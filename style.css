@@ -1,0 +1,369 @@
+@font-face {
+  font-family: "Rockwell SS";
+  src: url("./assets/fonts/rockwell-webfont.woff2") format("woff2"), url("./assets/fonts/rockwell-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  color: #212529;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rockwell SS";
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+a {
+  color: #000;
+  font-weight: bold;
+}
+
+section {
+  padding: 3rem 1rem;
+  border-top: 0.25rem solid #DDA580;
+}
+
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=tel],
+input[type=url],
+input[type=password],
+input[type=search],
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: #FFF;
+  background-color: #DDA580;
+  border-color: #DDA580;
+}
+
+.obj-layout {
+  margin: 0 auto;
+  max-width: 71.25rem;
+}
+
+.obj-content-wrapper {
+  display: flex;
+  flex-flow: column;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .obj-content-wrapper {
+    flex-flow: row wrap;
+  }
+}
+
+.obj-width-limiter {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.c-menu-bar {
+  padding: 1rem;
+  background-color: #D7DEE1;
+  border-bottom: 0.25rem solid #8AA6AF;
+  text-align: center;
+}
+.c-menu-bar__phone, .c-menu-bar__directions {
+  text-decoration: none;
+  font-family: "Rockwell SS";
+}
+
+.c-menu-bar__logo {
+  width: 5rem;
+  height: 5rem;
+}
+
+.c-menu-bar__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.c-menu {
+  margin-left: 2rem;
+}
+.c-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.c-menu li {
+  font-size: 1.25rem;
+}
+.c-menu li ul {
+  background-color: #8AA6AF;
+  display: block;
+  text-align: left;
+  position: absolute;
+  min-width: 8rem;
+  margin-top: 0.5rem;
+}
+.c-menu li ul li a {
+  text-transform: capitalize;
+}
+.c-menu a {
+  text-decoration: none;
+  font-family: "Rockwell SS";
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .site-header-cart {
+    width: 250px;
+    position: relative;
+    margin-left: auto;
+  }
+}
+
+.hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .hero {
+    max-height: 60vh;
+  }
+}
+.hero::before {
+  content: "";
+  display: block;
+  padding-top: 60vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  z-index: 2;
+}
+.hero__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.hero__logo-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.hero__logo {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.cmp-about__lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-align: center;
+  max-width: 34.375rem;
+  margin: 1.5rem auto 0 auto;
+}
+
+.cmp-hours__list {
+  max-width: 300px;
+  margin: 0 auto 2.5rem auto;
+}
+.cmp-hours__day {
+  display: flex;
+  justify-content: space-between;
+}
+.cmp-hours__day dt {
+  font-weight: 700;
+}
+.cmp-hours__day dd {
+  margin-bottom: 0.5rem;
+}
+.cmp-hours__day:last-child dd {
+  margin-bottom: 0;
+}
+.cmp-hours__sessions {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.cmp-hours__lessons {
+  text-align: center;
+}
+
+.cmp-prices {
+  text-align: center;
+}
+.cmp-prices h3 {
+  font-size: 1.25rem;
+  margin-top: 3rem;
+}
+.cmp-prices h2 + h3 {
+  border: 0;
+  padding-top: 0;
+}
+
+.site-footer {
+  background-color: #D7DEE1;
+  border-top: 0.25rem solid #8AA6AF;
+  padding: 1rem;
+}
+
+.c-footer__section-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.c-footer__section {
+  margin-top: 1rem;
+  border-top: none;
+  padding: 0;
+}
+.c-footer__section:not(:last-child) {
+  padding: 0 1.5rem 0 0;
+}
+.c-footer__section h3 {
+  font-size: 1.2rem;
+}
+.c-footer__section p {
+  margin-bottom: 0;
+}
+
+.cmp-form__group {
+  margin-bottom: 1rem;
+}
+
+.cmp-button--large {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+.cmp-button--primary {
+  color: #212529;
+  background-color: #DDA580;
+  border-color: #DDA580;
+}
+
+.cmp-home-section h2 {
+  text-align: center;
+}
+
+button:hover,
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover,
+.button:hover,
+.widget a.button:hover {
+  background-color: #d59062;
+  border-color: #d28858;
+  color: #fff;
+}
+
+.site-search,
+.woocommerce-active .site-branding {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .right-sidebar .content-area {
+    width: 73.9130434783%;
+    margin-right: 4.347826087%;
+    float: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .left-sidebar .widget-area {
+    width: 21.7391304348%;
+    float: none;
+    margin-right: 4.347826087%;
+    order: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .left-sidebar .content-area {
+    width: 73.9130434783%;
+    float: none;
+    margin-right: 0;
+    order: 3;
+  }
+}
+
+@media (min-width: 768px) {
+  .right-sidebar .widget-area {
+    width: 21.7391304348%;
+    float: none;
+    margin-right: 0;
+  }
+}
+
+.woocommerce {
+  width: 100%;
+  order: 1;
+}
+
+/*
+Theme Name: Switch & Signal
+Version: 1.0 
+Description: Child theme for Storefront. 
+Author: Anastasia Lanz
+Author URI: http://woocommerce.com 
+Template: storefront 
+*/
+/* --------------- Theme customization starts here ----------------- */
+
+/*# sourceMappingURL=style.css.map */
